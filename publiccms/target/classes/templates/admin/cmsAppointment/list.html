@@ -1,0 +1,31 @@
+<@_appointmentList  pageIndex=pageNum count=numPerPage >
+
+<div class="pageContent">
+    <div class="panelBar">
+        <ul class="toolBar">
+            <li><a href="enquiryMessage/delete?id={sid}" title="确定要删除该条记录吗?" target="ajaxTodo"><i class="icon-trash icon-large"></i> 删除</a></li>
+        </ul>
+    </div>
+    <table  style="table-layout: fixed" class="list" width="100%" layoutH="92">
+
+            <th width="30">ID</th>
+            <h1>描述</h1>
+
+
+        <tbody>
+        <#list page.list as a>
+
+            <h1>${a.description}</h1>
+
+
+
+        <td align="center">
+            <a href="/admin/message/add_Enquiry.html?id=${a.id}" target="navTab" rel="/admin/message/add_Enquiry">查看</a>
+        </td>
+
+        </#list>
+        </tbody>
+    </table>
+
+</div>
+</@_appointmentList>

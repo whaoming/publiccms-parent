@@ -1,0 +1,13 @@
+<h2 class="contentTitle"><#if site.useStatic><@t.page 'content.static_path.description'/><#else><@t.page 'content.dynamic_path.description'/></#if></h2>
+<div class="pageFormContent" layoutH="60">
+    <ul class="tree treeFolder expand">
+        <li>
+        <#if site.useStatic>
+            <a href="javascript:;" onclick="$.bringBack({contentPath:'<#noparse>${category.code}/${content.publishDate?string(\'yyyy-MM-dd\')}/${content.id}.html</#noparse>'});return false;"><@t.page 'static_path'/>:{<@t.page 'category.code'/>}/{<@t.page 'year'/>-<@t.page 'month'/>-<@t.page 'day'/>}/{<@t.page 'content.id'/>}.html</a>
+            <a href="javascript:;" onclick="$.bringBack({contentPath:'<#noparse>${content.publishDate?string(\'yyyy/MM-dd\')}/${content.id}.html</#noparse>'});return false;"><@t.page 'static_path'/>:{<@t.page 'year'/>}/{<@t.page 'month'/>-<@t.page 'day'/>}/{<@t.page 'content.id'/>}.html</a>
+        </#if>
+            <a href="javascript:;" onclick="$('input[data-model]',navTab.getCurrentPanel()).val('');$.bringBack({contentPath:'<#noparse>content.html?id=${content.id}</#noparse>'});return false;"><@t.page 'dynamic_path'/>:<@t.page 'template.name'/>.html?id={<@t.page 'content.id'/>}</a>
+            <a href="javascript:;" onclick="$('input[data-model]',navTab.getCurrentPanel()).val('');$.bringBack({contentPath:'<#noparse>content/${content.id}</#noparse>'});return false;"><@t.page 'dynamic_path'/>:<@t.page 'template.name'/>/{<@t.page 'content.id'/>}</a>
+        </li>
+    </ul>
+</div>
