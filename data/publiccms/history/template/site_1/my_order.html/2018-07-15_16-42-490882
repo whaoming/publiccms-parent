@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>New PublicCMS Template</title>
+</head>
+<body>
+    <main>New PublicCMS Template</main>
+	<@_appointmentList>
+	<#list page.list as model>
+		
+				<h3>最新${model.name!}</h3>
+			
+</@_appointmentList>
+    <footer>
+        <p>Powered by <a href="http://www.publiccms.com/">PublicCMS</a> </p>
+    </footer>
+</body>
+</html>

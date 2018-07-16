@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>alittleone</title>
+    <style>
+        .second-msg {
+        background-color: #f0f2f6;
+        color: #FFC408;
+        font-size: 17px;
+        text-align: center;
+        height: 30px;
+        line-height: 30px
+    }</style>
+    <!--<script src="https://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/3.0.0/vconsole.min.js"></script>-->
+    <script>
+        window.alert = function (name) {
+            var iframe = document.createElement("IFRAME");
+            iframe.style.display = "none";
+            iframe.setAttribute("src", 'data:text/plain,');
+            document.documentElement.appendChild(iframe);
+            window.frames[0].window.alert(name);
+            iframe.parentNode.removeChild(iframe);
+        };
+
+    </script>
+    <script>
+        // init vConsole
+       // var vConsole = new VConsole();
+        //console.log('Hello world');
+    </script>
+    <link href="http://wx.alittleone2014.com/addons/we7_alittleone/bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://wx.alittleone2014.com/addons/we7_alittleone/bower_components/materialize/dist/css/materialize.min.css" rel="stylesheet">
+    <link href="http://wx.alittleone2014.com/addons/we7_alittleone/bower_components/Framework7/dist/css/framework7.ios.colors.min.css"
+          rel="stylesheet">
+    <link href="http://wx.alittleone2014.com/addons/we7_alittleone/bower_components/Framework7/dist/css/framework7.ios.min.css" rel="stylesheet">
+    <link href="http://wx.alittleone2014.com/addons/we7_alittleone/bower_components/Framework7/dist/css/my-app.css" rel="stylesheet">
+    <link href="http://wx.alittleone2014.com/addons/we7_alittleone/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://wx.alittleone2014.com/addons/we7_alittleone/template/style/css/alittleone_common.css" rel="stylesheet">
+    <script type="text/javascript" src="http://wx.alittleone2014.com/addons/we7_alittleone/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="http://wx.alittleone2014.com/addons/we7_alittleone/bower_components/materialize/dist/js/materialize.min.js"></script>
+    <script type="text/javascript"
+            src="http://wx.alittleone2014.com/addons/we7_alittleone/bower_components/Framework7/dist/js/framework7.js"></script>
+    <script type="text/javascript" src="http://wx.alittleone2014.com/addons/we7_alittleone/bower_components/Framework7/dist/js/my-app.js"></script>
+    <script type="text/javascript" src="http://wx.alittleone2014.com/addons/we7_alittleone/template/style/js/common.js"></script>
+    
+<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script type="text/javascript">
+	window.sysinfo = window.sysinfo || {"uniacid":1031,"acid":"1031","siteroot":"http:\/\/wx.alittleone2014.com\/","siteurl":"http:\/\/wx.alittleone2014.com\/app\/index.php?i=1031&c=entry&do=orderlist&m=we7_alittleone","attachurl":"http:\/\/wx.alittleone2014.com\/attachment\/","cookie":{"pre":"49da_"},"MODULE_URL":"http:\/\/wx.alittleone2014.com\/addons\/we7_alittleone\/"} || {};
+	
+	// jssdk config 对象
+	jssdkconfig = null || {};
+	
+	// 是否启用调试
+	jssdkconfig.debug = false;
+	
+	jssdkconfig.jsApiList = [
+		'checkJsApi',
+		'onMenuShareTimeline',
+		'onMenuShareAppMessage',
+		'onMenuShareQQ',
+		'onMenuShareWeibo',
+		'hideMenuItems',
+		'showMenuItems',
+		'hideAllNonBaseMenuItem',
+		'showAllNonBaseMenuItem',
+		'translateVoice',
+		'startRecord',
+		'stopRecord',
+		'onRecordEnd',
+		'playVoice',
+		'pauseVoice',
+		'stopVoice',
+		'uploadVoice',
+		'downloadVoice',
+		'chooseImage',
+		'previewImage',
+		'uploadImage',
+		'downloadImage',
+		'getNetworkType',
+		'openLocation',
+		'getLocation',
+		'hideOptionMenu',
+		'showOptionMenu',
+		'closeWindow',
+		'scanQRCode',
+		'chooseWXPay',
+		'openProductSpecificView',
+		'addCard',
+		'chooseCard',
+		'openCard'
+	];
+	
+	wx.config(jssdkconfig);
+	
+</script></head>
+<body class="slide view-main">
+</html><style>body{background-color:#ebebeb}::-webkit-scrollbar{width:0;height:0}@media screen and (max-width:330px){.item-bottom{color:#b1b1b1;text-align:center;padding-top:28%}}@media screen and (min-width:330px){.item-bottom{color:#b1b1b1;text-align:center;padding-top:25%}}.status{background:#9e9e9e;font-size:9pt;color:#fff;padding:2px 8px;border-radius:0 3px 3px 3px;margin-left:5px}.cancel{background:#f44336}.confirm{background:#40c4ff}.serving{background:#ba68c8}.finish{background:#4caf50}.order-item{width:95%;margin:auto;background-color:#fff;border-radius:5px;margin-top:15px;margin-bottom:5px;height:30%;border:1px solid #d1d1d1}.item-left{float:left;margin-left:10px}.item-left,.item-right{margin-top:10px;font-size:9pt;font-weight:600}.item-right{float:right;margin-right:10px}.product-name{font-weight:400;color:#b1b1b1}.item-bottom div{border-top:1px solid #b1b1b1;width:100%}.item-bottom div i,.times{margin-left:5px}.times{padding:2px 8px}.btn-refresh{width:50%;height:40px;border:1px solid #DFDFDF;background:#ffc408;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;color:#050505;font-size:14px;margin-top:10px;margin-bottom:5px;}</style>
+<header xmlns="http://www.w3.org/1999/html">
+    <a href="javascript:history.back();" class="waves-effect waves-teal btn-flat go_back"><i
+            class="fa fa-angle-left"></i></a>
+    <a href="#" data-panel="right" class="waves-effect waves-teal btn-flat more-bars open-panel">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </a>
+</header>
+<script type="text/javascript">
+    var $$ = Dom7;
+    $(function () {
+        $$('.panel-right').on('open', function () {
+            $('.slide').addClass('immobility');
+            $('.slide').removeClass('slide');
+        });
+        $$('.panel-right').on('close', function () {
+            $('.immobility').addClass('slide');
+            $('.immobility').removeClass('immobility');
+        });
+    });
+</script>
+<div class="panel-overlay"></div>
+
+<div class="panel panel-right panel-cover panel-collapse">
+    <table class="choose-list">
+        <tbody>
+        <tr class="choose-list-item">
+            <td style="border-radius: 0"><a href="./index.php?i=1031&c=entry&do=main&m=we7_alittleone">
+            </a></td>
+            <td style="border-radius: 0"><i class="fa fa-clock-o choose-icon" aria-hidden="true"></i></td>
+            <td style="border-radius: 0"><span><strong>开始预约</strong></span></td>
+            <td style="border-radius: 0"><i class="fa fa-angle-right go-move" aria-hidden="true"></i></td>
+        </tr>
+        <tr class="choose-list-item">
+            <td style="border-radius: 0"><a href="./index.php?i=1031&c=entry&do=orderlist&m=we7_alittleone"></a></td>
+            <td style="border-radius: 0"><i class="fa fa-table choose-icon" aria-hidden="true"></i></td>
+            <td style="border-radius: 0"><span><strong>我的订单</strong></span></td>
+            <td style="border-radius: 0"><i class="fa fa-angle-right go-move" aria-hidden="true"></i></td>
+        </tr>
+        <tr class="choose-list-item">
+            <td style="border-radius: 0"><a href="./index.php?i=1031&c=entry&do=usermessage&m=we7_alittleone"></a></td>
+            <td style="border-radius: 0"><i class="fa fa-user choose-icon" aria-hidden="true"></i></td>
+            <td style="border-radius: 0"><span><strong>个人资料</strong></span></td>
+            <td style="border-radius: 0"><i class="fa fa-angle-right go-move" aria-hidden="true"></i></td>
+        </tr>
+        <tr class="choose-list-item">
+            <td style="border-radius: 0"><a href="./index.php?i=1031&c=entry&do=shop&m=we7_alittleone"></a></td>
+            <td style="border-radius: 0"><i class="fa fa-map-marker choose-icon" aria-hidden="true"></i></td>
+            <td style="border-radius: 0"><span><strong>门店地址</strong></span></td>
+            <td style="border-radius: 0"><i class="fa fa-angle-right go-move" aria-hidden="true"></i></td>
+        </tr>
+        <tr class="choose-list-item">
+            <td style="border-radius: 0"><a href="./index.php?i=1031&c=entry&do=announcements&m=we7_alittleone"></a></td>
+            <td style="border-radius: 0"><i class="fa fa-camera-retro choose-icon" aria-hidden="true"></i></td>
+            <td style="border-radius: 0"><span><strong>拍摄须知</strong></span></td>
+            <td style="border-radius: 0"><i class="fa fa-angle-right go-move" aria-hidden="true"></i></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="panel-top">
+    <span class="text-welcome">alittleone</span>
+</div><section class="order_list">
+    <ul class="tabs z-depth-1" id="tabs">
+        <li style="display: inline-block" class="tab col s3"><a href="#tabs0">待支付</a></li>
+        <li style="display: inline-block" class="tab col s3"><a href="#tabs1" class="active">进行中</a></li>
+        <li style="display: inline-block" class="tab col s3"><a href="#tabs2">已完成</a></li>
+        <li style="display: inline-block" class="tab col s3"><a href="#tabs3">已取消</a></li>
+    </ul>
+    <div>
+        <div id="tabs0" class="col s12 item"></div>
+        <div id="tabs1" class="col s12 item">
+            <!--<div class="order-item" onclick="javascript:window.location.href='http://www.baidu.com'">-->
+                <!--<div class="order-msg">-->
+                    <!--<div class="item-left">-->
+                        <!--<div class="user-name">小明</div>-->
+                        <!--<div class="order-time">2016年8月24号(周三) 17:00</div>-->
+                        <!--<div class="order-shops">上海五角店</div>-->
+                        <!--<br>-->
+                        <!--<div class="product-name">证件照</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-right">-->
+                        <!--<div><span class="status serving">进行中</span></div>-->
+                        <!--<div class="count-time"><span class="times">12:55</span></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="item-bottom">-->
+                    <!--<div>-->
+                        <!--<span>查看订单详情<i class="fa fa-angle-right" aria-hidden="true"></i></span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <@_myAppointmentList>
+	<#list page.list as model>
+		
+				<h3>最新:${model.description}</h3>
+			</#list>
+</@_myAppointmentList>
+        </div>
+        <div id="tabs2" class="col s12 item"></div>
+        <div id="tabs3" class="col s12 item"></div>
+    </div>
+</section>
+<section style="display:none" id="load-more-wrap">
+    <div class="load_mare">
+        <div class="center-align">
+            <a href="javascript:void(0)" class="waves-effect waves-light btn btn-refresh" id="load-more" inx="1">
+                <i class="fa fa-refresh"></i> 加载更多
+            </a>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+    var page = [1, 1, 1, 1];
+
+    getContents(1);
+
+    $('#tabs').find('li').click(function () {
+        var inx = $(this).index();
+        getContents(inx);
+        $('#tabs' + (inx)).siblings().empty();
+        $('#load-more').attr('inx', inx);
+
+        for (var i = 0; i < 4; ++i) {
+            if (i == inx)
+                continue;
+            page[i] = 1;
+        }
+    });
+
+    $('#load-more').click(function () {
+        var inx = parseInt($(this).attr('inx'));
+        getContents(inx);
+    })
+
+    function getContents(inx) {
+        // ajax("./index.php?i=1031&c=entry&op=getorder&do=orderlist&m=we7_alittleone", {
+        //     "status": inx,
+        //     "page": page[inx]
+        // }, function (result) {
+        //     if (result.status == 1) {
+        //         ++page[inx];
+        //         var o = $('#tabs' + (inx));
+        //         o.append(result.html);
+        //         if (o.find('.order-item').length < 5) {
+        //             $('#load-more-wrap').hide();
+        //         }
+        //         else {
+        //             $('#load-more-wrap').show();
+        //         }
+        //     }
+        //     else if (result.status == -1) {
+        //         $('#tabs' + (inx + 1)).append(result.html);
+        //         $('#load-more-wrap').hide();
+        //     }
+        //     else {
+        //         tips(result.message);
+        //         $('#load-more-wrap').hide();
+        //     }
+        // }, 'GET');
+    }
+</script>
+<script>;</script><script type="text/javascript" src="http://wx.alittleone2014.com/app/index.php?i=1031&c=utility&a=visit&do=showjs&m=we7_alittleone"></script></body>
+<script type="text/javascript">
+    function pushHistory() {
+        window.addEventListener("popstate", function(e) {
+//            self.location.reload();
+            self.location.replace(location.href);
+        }, false);
+        var state = {
+            title : "",
+            url : "#"
+        };
+        window.history.replaceState(state, "", "#");
+    }
+    $(function() {
+        pushHistory();
+    });
+    $(function () {
+        $('.choose-list-item').on("touchstart", function () {
+            $(this).addClass('active');
+        });
+        $('.choose-list-item').on("touchend", function () {
+            $(this).removeClass('active');
+            var url = $(this).find('a').attr('href');
+            window.location.href = url;
+        });
+    });
+</script>
+</html>
