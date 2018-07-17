@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcee8543-13a4-40dc-ada1-2543e10ab4e1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/publiccms/indexes/com.publiccms.entities.cms.CmsContent/_4.cfs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/publiccms/indexes/com.publiccms.entities.cms.CmsContent/segments_a" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/publiccms-common/target/classes/com/publiccms/common/cache/MemoryCacheEntity.class" afterPath="$PROJECT_DIR$/publiccms-common/target/classes/com/publiccms/common/cache/MemoryCacheEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/publiccms-common/target/classes/com/publiccms/common/directive/BaseTemplateDirective.class" afterPath="$PROJECT_DIR$/publiccms-common/target/classes/com/publiccms/common/directive/BaseTemplateDirective.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/publiccms-common/target/classes/com/publiccms/common/handler/TemplateDirectiveHandler.class" afterPath="$PROJECT_DIR$/publiccms-common/target/classes/com/publiccms/common/handler/TemplateDirectiveHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/publiccms-core/target/classes/com/publiccms/common/interceptor/WebContextInterceptor.class" afterPath="$PROJECT_DIR$/publiccms-core/target/classes/com/publiccms/common/interceptor/WebContextInterceptor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/publiccms-core/target/classes/com/publiccms/controller/web/LoginController.class" afterPath="$PROJECT_DIR$/publiccms-core/target/classes/com/publiccms/controller/web/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/publiccms-core/target/classes/com/publiccms/views/directive/cms/CmsAppointmentListDirective.class" afterPath="$PROJECT_DIR$/publiccms-core/target/classes/com/publiccms/views/directive/cms/CmsAppointmentListDirective.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/publiccms/template/site_1/add_appoint.html" afterPath="$PROJECT_DIR$/data/publiccms/template/site_1/add_appoint.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/publiccms/template/site_1/index.html" afterPath="$PROJECT_DIR$/data/publiccms/template/site_1/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/publiccms/web/site_1/download.html" afterPath="$PROJECT_DIR$/data/publiccms/web/site_1/download.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/publiccms/web/site_1/index.html" afterPath="$PROJECT_DIR$/data/publiccms/web/site_1/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/publiccms-common/src/main/java/com/publiccms/common/directive/BaseTemplateDirective.java" afterPath="$PROJECT_DIR$/publiccms-common/src/main/java/com/publiccms/common/directive/BaseTemplateDirective.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/publiccms-common/src/main/java/com/publiccms/common/handler/TemplateDirectiveHandler.java" afterPath="$PROJECT_DIR$/publiccms-common/src/main/java/com/publiccms/common/handler/TemplateDirectiveHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/publiccms-core/src/main/java/com/publiccms/common/interceptor/WebContextInterceptor.java" afterPath="$PROJECT_DIR$/publiccms-core/src/main/java/com/publiccms/common/interceptor/WebContextInterceptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/publiccms-core/src/main/java/com/publiccms/controller/web/LoginController.java" afterPath="$PROJECT_DIR$/publiccms-core/src/main/java/com/publiccms/controller/web/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/publiccms-core/src/main/java/com/publiccms/controller/web/cms/AppointmentController.java" afterPath="$PROJECT_DIR$/publiccms-core/src/main/java/com/publiccms/controller/web/cms/AppointmentController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/publiccms-core/src/main/java/com/publiccms/entities/cms/CmsAppointment.java" afterPath="$PROJECT_DIR$/publiccms-core/src/main/java/com/publiccms/entities/cms/CmsAppointment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/publiccms-core/src/main/java/com/publiccms/views/directive/cms/CmsAppointmentListDirective.java" afterPath="$PROJECT_DIR$/publiccms-core/src/main/java/com/publiccms/views/directive/cms/CmsAppointmentListDirective.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/publiccms/src/main/resources/cms.properties" afterPath="$PROJECT_DIR$/publiccms/src/main/resources/cms.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/publiccms/target/classes/cms.properties" afterPath="$PROJECT_DIR$/publiccms/target/classes/cms.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/publiccms-oauth/target/" />
     <ignored path="$PROJECT_DIR$/publiccms-redis/target/" />
@@ -72,8 +51,8 @@
       <file leaf-file-name="CmsAppointment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/publiccms-core/src/main/java/com/publiccms/entities/cms/CmsAppointment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="42" column="4" lean-forward="false" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
+            <state relative-caret-position="342">
+              <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -1233,12 +1212,12 @@
       <workItem from="1531698747270" duration="2049000" />
       <workItem from="1531742641456" duration="3814000" />
       <workItem from="1531786768526" duration="371000" />
-      <workItem from="1531819871897" duration="10797000" />
+      <workItem from="1531819871897" duration="11299000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35500000" />
+    <option name="totallyTimeSpent" value="36002000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1272,7 +1251,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3163565" sideWeight="0.53417575" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3163565" sideWeight="0.53417575" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908913" sideWeight="0.49798965" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23147616" sideWeight="0.48853868" order="0" side_tool="false" content_ui="combo" />
@@ -1724,8 +1703,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/publiccms-core/src/main/java/com/publiccms/entities/cms/CmsAppointment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="42" column="4" lean-forward="false" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
+        <state relative-caret-position="342">
+          <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
           <folding />
         </state>
       </provider>
