@@ -35,7 +35,7 @@ public class TemplateDirectiveHandler extends BaseHandler {
     private Map<String, TemplateModel> parameters;
     private TemplateModel[] loopVars;
     private TemplateDirectiveBody templateDirectiveBody;
-    private Environment environment;
+    protected Environment environment;
 
     /**
      * @param parameters

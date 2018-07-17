@@ -27,6 +27,7 @@ public abstract class BaseTemplateDirective implements TemplateDirectiveModel, D
     @Override
     public void execute(Environment environment, @SuppressWarnings("rawtypes") Map parameters, TemplateModel[] loopVars,
             TemplateDirectiveBody templateDirectiveBody) throws TemplateException, IOException {
+//        environment.get
         try {
             execute(new TemplateDirectiveHandler(parameters, loopVars, environment, templateDirectiveBody));
         } catch (IOException e) {

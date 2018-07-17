@@ -3,13 +3,16 @@ package com.publiccms.controller.web.cms;
 import com.publiccms.common.base.AbstractController;
 import com.publiccms.common.tools.CommonUtils;
 import com.publiccms.common.tools.ControllerUtils;
+import com.publiccms.common.tools.ExtendUtils;
 import com.publiccms.common.tools.RequestUtils;
 import com.publiccms.entities.cms.CmsAppointment;
+import com.publiccms.entities.cms.CmsContentAttribute;
 import com.publiccms.entities.cms.CmsPlace;
 import com.publiccms.entities.log.LogOperate;
 import com.publiccms.entities.sys.SysSite;
 import com.publiccms.entities.sys.SysUser;
 import com.publiccms.logic.service.cms.CmsAppointmentService;
+import com.publiccms.logic.service.cms.CmsContentAttributeService;
 import com.publiccms.logic.service.cms.CmsPlaceService;
 import com.publiccms.logic.service.log.LogLoginService;
 import com.publiccms.views.pojo.model.CmsPlaceParameters;
@@ -23,21 +26,26 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.util.Map;
 
 @Controller
 @RequestMapping("appointment")
 public class AppointmentController extends AbstractController {
     @Autowired
     private CmsAppointmentService service;
+    @Autowired
+    private CmsContentAttributeService contentService;
 
     @RequestMapping(value = "save")
-    public String save(CmsAppointment entity, String returnUrl, String _csrf,
+    public String save(CmsAppointment entity,String contentId, String returnUrl, String _csrf,
                        HttpServletRequest request, HttpSession session, HttpServletResponse response, ModelMap model) {
         SysUser user = ControllerUtils.getUserFromSession(session);
         if(user == null){
             return UrlBasedViewResolver.REDIRECT_URL_PREFIX + returnUrl;
         }
 
+        CmsContentAttribute contentAttribute = contentService.getEntity(Long.valueOf(contentId));
+        Map<String, String> map = ExtendUtils.getExtendMap(contentAttribute.getData());
         SysSite site = getSite(request);
         if (CommonUtils.empty(returnUrl)) {
             returnUrl = site.getDynamicPath();

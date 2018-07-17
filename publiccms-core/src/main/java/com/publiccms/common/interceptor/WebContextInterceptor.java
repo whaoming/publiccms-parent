@@ -93,6 +93,7 @@ public class WebContextInterceptor extends HandlerInterceptorAdapter {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws ServletException {
         HttpSession session = request.getSession();
         SysSite site = siteComponent.getSite(request.getServerName());
+//        SysUser userFromSession = ControllerUtils.getUserFromSession(session);
         SysUser user = initUser(ControllerUtils.getUserFromSession(session), LogLoginService.CHANNEL_WEB,
                 CommonConstants.getCookiesUser(), site, request, response);
         if (null != user) {

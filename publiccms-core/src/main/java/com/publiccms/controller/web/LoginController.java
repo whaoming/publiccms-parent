@@ -53,6 +53,46 @@ public class LoginController extends AbstractController {
     @Autowired
     private ConfigComponent configComponent;
 
+    @RequestMapping(value = "doLoginCheck", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> doLoginCheck(String returnUrl,HttpSession session, HttpServletRequest request,
+                               HttpServletResponse response, ModelMap model){
+        SysUser user = ControllerUtils.getUserFromSession(session);
+        SysSite site = getSite(request);
+        if(user == null){
+            user = new SysUser();
+            user.setName(String.valueOf(System.currentTimeMillis()));
+            user.setNickName(StringUtils.trim(String.valueOf(System.currentTimeMillis()+10)));
+            String ip = RequestUtils.getIpAddress(request);
+            user.setPassword("123456");
+            user.setLastLoginIp(ip);
+            user.setSiteId(site.getId());
+            service.save(user);
+            user.setPassword(null);
+            ControllerUtils.setUserToSession(request.getSession(), user);
+            String authToken = UUID.randomUUID().toString();
+            addLoginStatus(user, authToken, request, response);
+            sysUserTokenService.save(new SysUserToken(authToken, site.getId(), user.getId(), LogLoginService.CHANNEL_WEB,
+                    CommonUtils.getDate(), ip));
+//            if (null != channel && null != openId) {
+//                String oauthToken = new StringBuilder(channel).append(CommonConstants.DOT).append(site.getId())
+//                        .append(CommonConstants.DOT).append(openId).toString();
+//                sysUserTokenService
+//                        .save(new SysUserToken(oauthToken, site.getId(), entity.getId(), channel, CommonUtils.getDate(), ip));
+//            }
+        }
+        Map<String, Object> result = new HashMap<>();
+        if (user != null){
+            result.put("id", user.getId());
+            result.put("name", user.getName());
+            result.put("nickname", user.getNickName());
+            result.put("email", user.getEmail());
+            result.put("emailChecked", user.isEmailChecked());
+            result.put("superuserAccess", user.isSuperuserAccess());
+        }
+        return result;
+    }
+
     /**
      * @param username
      * @param password

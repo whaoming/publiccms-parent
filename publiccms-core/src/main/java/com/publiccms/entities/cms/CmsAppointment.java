@@ -22,6 +22,27 @@ public class CmsAppointment implements java.io.Serializable{
     @GeneratorColumn(title = "描述")
     private String description;
 
+    //用户id
+    private long userId;
+    //价格
+    private int price;
+    //内容id
+    private long contentId;
+    //创建时间
+    private String createTime;
+    //预约时间
+    private String pointTime;
+    //拍摄地址
+    private String location;
+
+    //套餐信息
+    private String content_title;
+    //服务时长
+    private String content_duration;
+
+
+
+
 
     @Id
     @GeneratedValue(generator = "cmsGenerator")

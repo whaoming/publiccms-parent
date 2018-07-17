@@ -175,7 +175,7 @@
 <div class="confirm-text">确认订单</div>
 <section class="service_info beautician confirm-msg">
         <form class="submit-form" method="post"
-          action="${site.dynamicPath}appointment/save.do?contentId=${content_id}">
+          action="${site.dynamicPath}appointment/save.do">
             <h6>拍摄信息</h6>
         <ul>
             <li><span class="shooting-msg-left">拍摄日期：</span><span class="shooting-msg-right">2018年07月16日(周一) 11:15</span></li>
