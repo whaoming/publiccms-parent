@@ -177,7 +177,7 @@
 
 <div class="panel-bottom">
     <button type="button" class="btn btn-order">我的订单</button>
-    <button type="button" class="btn btn-subscribe"  href="//localhost:8080/publiccms/login.html">开始预约</button>
+    <button type="button" class="btn btn-subscribe"  href="${site.dynamicPath}login.html">开始预约</button>
 </div>
 <script type="text/javascript">
 

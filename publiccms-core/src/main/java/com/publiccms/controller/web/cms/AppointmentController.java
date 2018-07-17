@@ -2,11 +2,13 @@ package com.publiccms.controller.web.cms;
 
 import com.publiccms.common.base.AbstractController;
 import com.publiccms.common.tools.CommonUtils;
+import com.publiccms.common.tools.ControllerUtils;
 import com.publiccms.common.tools.RequestUtils;
 import com.publiccms.entities.cms.CmsAppointment;
 import com.publiccms.entities.cms.CmsPlace;
 import com.publiccms.entities.log.LogOperate;
 import com.publiccms.entities.sys.SysSite;
+import com.publiccms.entities.sys.SysUser;
 import com.publiccms.logic.service.cms.CmsAppointmentService;
 import com.publiccms.logic.service.cms.CmsPlaceService;
 import com.publiccms.logic.service.log.LogLoginService;
@@ -31,6 +33,11 @@ public class AppointmentController extends AbstractController {
     @RequestMapping(value = "save")
     public String save(CmsAppointment entity, String returnUrl, String _csrf,
                        HttpServletRequest request, HttpSession session, HttpServletResponse response, ModelMap model) {
+        SysUser user = ControllerUtils.getUserFromSession(session);
+        if(user == null){
+            return UrlBasedViewResolver.REDIRECT_URL_PREFIX + returnUrl;
+        }
+
         SysSite site = getSite(request);
         if (CommonUtils.empty(returnUrl)) {
             returnUrl = site.getDynamicPath();

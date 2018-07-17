@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>alittleone</title>
@@ -31,7 +30,6 @@
        // var vConsole = new VConsole();
         //console.log('Hello world');
     </script>
-	<script src="//www.publiccms.com/assets/js/jquery-1.9.1.min.js">
     <link href="http://wx.alittleone2014.com/addons/we7_alittleone/bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="http://wx.alittleone2014.com/addons/we7_alittleone/bower_components/materialize/dist/css/materialize.min.css" rel="stylesheet">
     <link href="http://wx.alittleone2014.com/addons/we7_alittleone/bower_components/Framework7/dist/css/framework7.ios.colors.min.css"
@@ -192,7 +190,7 @@
 <#assign attribute=getContentAttribute(a.id)/>
 
 		 <div class="col-33 img-btn"
-             product-url="./add_appoint.html?content_id=${a.id}"
+             product-url="./add_appoint.html"
 			  href="www.baidu.com"
 			  >
             <input class="img" type="image" src="${attribute.logo}">
@@ -288,22 +286,11 @@
             '</div>'
         )
     });
-		
+	var path = ${site.dynamicPath!};
     $(function () {
         $('.img-btn').click(function () {
-			//console.log("loginPath:"+ ${object.login_path!});
-			$.getJSON('loginStatus?callback=?', function(data){
-				//alert(data);		
-if(data.id){
-	var url = $('.img-btn').attr('product-url');
-    window.location.href = url;
-}else{
-	alert("请登录")
-	window.location.href = "./member/login.html";
-	}
-		
-		});
-		
+			
+			alert("path:"+paths);
   
         });
     });

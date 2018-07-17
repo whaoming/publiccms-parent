@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<#-- 站点配置:登录页面路径 -->
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>alittleone</title>
+    <title><@_sysConfigData code="site">${object.login_path!}</@_sysConfigData></title>
     <style>
         .second-msg {
         background-color: #f0f2f6;
@@ -177,7 +180,7 @@
 
 <div class="panel-bottom">
     <button type="button" class="btn btn-order">我的订单</button>
-    <button type="button" class="btn btn-subscribe"  href="//localhost:8080/publiccms/login.html">开始预约</button>
+    <button type="button" class="btn btn-subscribe"  href="${site.dynamicPath}login.html">开始预约</button>
 </div>
 <script type="text/javascript">
 

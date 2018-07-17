@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>alittleone</title>
@@ -192,7 +191,7 @@
 <#assign attribute=getContentAttribute(a.id)/>
 
 		 <div class="col-33 img-btn"
-             product-url="./add_appoint.html?content_id=${a.id}"
+             product-url="./add_appoint.html"
 			  href="www.baidu.com"
 			  >
             <input class="img" type="image" src="${attribute.logo}">
@@ -288,22 +287,32 @@
             '</div>'
         )
     });
+	var path;
+	$.getJSON('loginStatus?callback=?', function(data){
+				//alert(data);		
+if(data.id){
+	path = true;
+}
+		console.log("asd")
+		});
+	
+	<@_sysConfigData code="site">
+	var loginPath = ${object.login_path!}
+		
+	</@_sysConfigData>
 		
     $(function () {
         $('.img-btn').click(function () {
-			//console.log("loginPath:"+ ${object.login_path!});
-			$.getJSON('loginStatus?callback=?', function(data){
-				//alert(data);		
-if(data.id){
-	var url = $('.img-btn').attr('product-url');
-    window.location.href = url;
-}else{
-	alert("请登录")
-	window.location.href = "./member/login.html";
-	}
-		
-		});
-		
+			console.log("loginPath:"+loginPath);
+			if(path) {
+				var url = $(this).attr('product-url');
+            	window.location.href = url;
+			}else{
+				alert("asd")
+				<#-- 站点配置:登录页面路径 -->
+
+
+			}
   
         });
     });

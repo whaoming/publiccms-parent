@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<#-- 站点配置:登录页面路径 -->
+
+<@_sysConfigData code="site">var path = ${object.login_path!}</@_sysConfigData>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>alittleone</title>
+    <title></title>
     <style>
         .second-msg {
         background-color: #f0f2f6;
@@ -15,6 +18,7 @@
     }</style>
     <!--<script src="https://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/3.0.0/vconsole.min.js"></script>-->
     <script>
+		console.log("path:"+path)
         window.alert = function (name) {
             var iframe = document.createElement("IFRAME");
             iframe.style.display = "none";
@@ -177,7 +181,7 @@
 
 <div class="panel-bottom">
     <button type="button" class="btn btn-order">我的订单</button>
-    <button type="button" class="btn btn-subscribe"  href="//localhost:8080/publiccms/login.html">开始预约</button>
+    <button type="button" class="btn btn-subscribe"  href="${site.dynamicPath}login.html">开始预约</button>
 </div>
 <script type="text/javascript">
 
