@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>New PublicCMS Template</title>
+</head>
+<body>
+	<#-- parentId:父分类ID,typeId:分类类型ID,allowContribute:允许投稿["true":是,"false":否],pageIndex:页码,count:每页数据条数 -->
+<@_categoryList  typeId='123'  pageIndex=1 count=10>
+    <#list page.list as a>
+        <a href="${a.url!}">${a.name}</a>
+    </#list>
+</@_categoryList>
+
+    <main>New PublicCMS Template</main>
+    <footer>
+        <p>Powered by <a href="http://www.publiccms.com/">PublicCMS</a> </p>
+    </footer>
+</body>
+</html>

@@ -29,6 +29,7 @@ public abstract class BaseTemplateDirective implements TemplateDirectiveModel, D
             TemplateDirectiveBody templateDirectiveBody) throws TemplateException, IOException {
 //        environment.get
         try {
+//            environment.get
             execute(new TemplateDirectiveHandler(parameters, loopVars, environment, templateDirectiveBody));
         } catch (IOException e) {
             throw e;

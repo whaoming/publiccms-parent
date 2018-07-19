@@ -58,9 +58,11 @@ public class LoginController extends AbstractController {
     public Map<String, Object> doLoginCheck(String returnUrl,HttpSession session, HttpServletRequest request,
                                HttpServletResponse response, ModelMap model){
         SysUser user = ControllerUtils.getUserFromSession(session);
+//        user = null;
         SysSite site = getSite(request);
         if(user == null){
             user = new SysUser();
+
             user.setName(String.valueOf(System.currentTimeMillis()));
             user.setNickName(StringUtils.trim(String.valueOf(System.currentTimeMillis()+10)));
             String ip = RequestUtils.getIpAddress(request);
@@ -74,6 +76,9 @@ public class LoginController extends AbstractController {
             addLoginStatus(user, authToken, request, response);
             sysUserTokenService.save(new SysUserToken(authToken, site.getId(), user.getId(), LogLoginService.CHANNEL_WEB,
                     CommonUtils.getDate(), ip));
+            service.updateLoginStatus(user.getId(), ip);
+            logLoginService.save(new LogLogin(site.getId(), user.getName(), user.getId(), ip, LogLoginService.CHANNEL_WEB, true,
+                    CommonUtils.getDate(), null));
 //            if (null != channel && null != openId) {
 //                String oauthToken = new StringBuilder(channel).append(CommonConstants.DOT).append(site.getId())
 //                        .append(CommonConstants.DOT).append(openId).toString();

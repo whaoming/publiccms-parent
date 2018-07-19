@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>New PublicCMS Template</title>
+</head>
+<body>
+    
+	<@_userContentList userId=user.id>
+    <#list page.list as a>
+        <h1 href="${a.url!}">${a.title}</h1>
+    </#list>
+</@_userContentList>
+
+    <footer>
+        <p>Powered by <a href="http://www.publiccms.com/">PublicCMS</a> </p>
+    </footer>
+</body>
+	
+</html>

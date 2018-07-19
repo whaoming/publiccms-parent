@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>New PublicCMS Template</title>
+</head>
+<body>
+    <main>New PublicCMS Template</main>
+    <footer>
+        <p>Powered by <a href="http://www.publiccms.com/">PublicCMS</a> </p>
+    </footer>
+</body>
+</html><#-- categoryId:分类ID,containChild:包含子分类内容,categoryIds:多个分类ID,modelId:模型ID,parentId:父内容ID,onlyUrl:外链["true":是,"false":否],hasImages:拥有图片列表["true":是,"false":否],hasFiles:拥有附件列表["true":是,"false":否],hasCover:拥有封面图["true":是,"false":否],orderField:排序字段["scores":分数,"comments":评论,"clicks":点击数,"publishDate":发布日期,"checkDate":审核日期,"updateDate":更新日期,默认:排序、发布日期字段倒序],orderType:排序类型["asc":正序,"desc":倒序],pageIndex:页码,count:每页数据条数 -->
+<@_userContentList userId=user.id>
+    <#list page.list as a>
+        <a href="${a.url!}">${a.title}</a>
+    </#list>
+</@_userContentList>

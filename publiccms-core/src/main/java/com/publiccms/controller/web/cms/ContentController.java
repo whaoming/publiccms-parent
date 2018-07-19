@@ -171,6 +171,7 @@ public class ContentController extends AbstractController {
             attribute.setData(null);
         }
         attributeService.updateAttribute(entity.getId(), attribute);// 更新保存扩展字段，文本字段
+        returnUrl += "?contentId=" + entity.getId();
         return UrlBasedViewResolver.REDIRECT_URL_PREFIX + returnUrl;
     }
 

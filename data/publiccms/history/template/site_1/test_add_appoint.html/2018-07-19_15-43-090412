@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>New PublicCMS Template</title>
+</head>
+<body>
+    <main>New PublicCMS Template</main>
+	<#-- id:内容ID -->
+<@_content id=appoint_type>
+    <a href="${object.url!}">${object.title}</a>
+</@_content>
+
+<form method="post" action="${site.dynamicPath}content/save.do">
+    <input type="hidden" name="_csrf" value="<@_csrfToken/>"/>
+    <input name="returnUrl" type="hidden" value="//localhost:8080/publiccms/" />
+    <input name="categoryId" type="hidden" value="124"/>
+    <input name="modelId" type="hidden" value="appointment_item"/>
+    <p><label>标题:</label><input name="title" type="text" size="60" maxlength="255"/></p>
+    <p>    <input name="modelExtendDataList[0].name" type="hidden" value="appointment_type"/>
+            <input name="modelExtendDataList[0].value" type="text" size="5" value="${(appoint_type)!}" style="display:none"/>
+</p>
+    <p><input type="submit" value="保存"/></p>
+</form>
+	
+    <footer>
+        <p>Powered by <a href="http://www.publiccms.com/">PublicCMS</a> </p>
+    </footer>
+</body>
+</html>
