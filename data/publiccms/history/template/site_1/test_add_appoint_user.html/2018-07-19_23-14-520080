@@ -401,7 +401,7 @@
             <!--}-->
         <!--}-->
     <!--</script>-->
-</body>
+<script>;</script><script type="text/javascript" src="http://wx.alittleone2014.com/app/index.php?i=1031&c=utility&a=visit&do=showjs&m=we7_alittleone"></script></body>
 <script type="text/javascript">
     function pushHistory() {
         window.addEventListener("popstate", function(e) {

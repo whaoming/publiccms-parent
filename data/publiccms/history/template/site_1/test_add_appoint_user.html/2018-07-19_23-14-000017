@@ -194,7 +194,7 @@
     <input name="parentId" type="text" value="${(contentId)!}" style="display:none"/>
     <input name="modelId" type="hidden" value="user_test"/>
     <input name="author" type="hidden" value="${(user.nickName)!}"/>
-    <p><input name="title" type="text" size="60" maxlength="255" value="title" style="display:none"/></p>
+    <p><input name="title" type="text" size="60" maxlength="255" style="display:none"/></p>
     <p><textarea name="text" cols="80" rows="20" style="display:none"></textarea></p>
     <div class="list-block fill-form">
         <ul>
@@ -259,7 +259,7 @@
     </div>
     <div class="usermsg-bottom">
         <button type="button" class="btn btn-cancel">取消</button>
-        <button type="submit" class="btn">确认</button>
+        <button type="submit" class="btn btn-yes">确认</button>
     </div>
     <input type="hidden" name="username" value="">
     <input type="hidden" name="phone" value="">
@@ -401,7 +401,7 @@
             <!--}-->
         <!--}-->
     <!--</script>-->
-</body>
+<script>;</script><script type="text/javascript" src="http://wx.alittleone2014.com/app/index.php?i=1031&c=utility&a=visit&do=showjs&m=we7_alittleone"></script></body>
 <script type="text/javascript">
     function pushHistory() {
         window.addEventListener("popstate", function(e) {

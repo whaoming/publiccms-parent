@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <#-- categoryId:分类ID,containChild:包含子分类内容,categoryIds:多个分类ID,modelId:模型ID,parentId:父内容ID,onlyUrl:外链["true":是,"false":否],hasImages:拥有图片列表["true":是,"false":否],hasFiles:拥有附件列表["true":是,"false":否],hasCover:拥有封面图["true":是,"false":否],orderField:排序字段["scores":分数,"comments":评论,"clicks":点击数,"publishDate":发布日期,"checkDate":审核日期,"updateDate":更新日期,默认:排序、发布日期字段倒序],orderType:排序类型["asc":正序,"desc":倒序],pageIndex:页码,count:每页数据条数 -->
 
@@ -10,7 +11,7 @@
 <#assign attribute=getContentAttribute(appoint_type)/>
 <a href="${object.url!}">${attribute.price}</a>
 
-<h1>${content.editor!}</h1>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -111,25 +112,7 @@
 <body class="slide view-main">
 </html><style>body{padding-bottom:60px;background-color:#ebebeb}::-webkit-scrollbar{width:0;height:0}section{padding:0 .75rem;background-color:#fff}section h6{color:#050505;padding:1rem 0;border-bottom:1px solid #ECECEC;margin:0;margin-bottom:10px}.product_info .item .img img{display:block;width:64px;height:64px;border-radius:2px}.product_info .item .name span{display:block;height:60px;vertical-align:middle;display:table-cell;font-weight:500}.product_info .item .price span{font-size:1.1rem}.product_info ul{margin:0}.product_info ul li{height:24px;line-height:24px;color:#8a8a8a;margin-bottom:10px}.product_info ul li .order_amount strong{font-size:1.25rem;font-weight:400}.coupons a{width:100%}.coupons h6 span{float:right;color:#8a8a8a}.coupons h6 span strong{color:red;padding:0 5px}.coupons h6 span i{margin-left:5px}.coupons ul{margin:0 0 10px 0}.coupons ul li{height:28px;line-height:28px;text-align:right;color:#8a8a8a}.coupons ul li i{color:#10c6bb;margin-right:5px}.coupons ul li span{color:#f45e4e}.service_info ul{margin:0 0 10px 0}.service_info ul li{height:24px;line-height:24px;color:#8a8a8a}.beautician img{display:block;width:68px;height:68px;border-radius:50%}.beautician .info div{color:#f45e4e;text-align:right}.beautician .info div span{color:#050505;float:left}.beautician .info p{color:#8a8a8a;margin-bottom:0;font-size:13px}.checkout_cart .col .total_price span{font-size:1.5rem}.payment img{display:block;width:28px;height:28px}.payment .row .s2 i{font-size:1.5rem;vertical-align:middle;display:table-cell;color:#DCDCDC}.shooting-msg-right{color:#4c7097;font-size:13px;margin-left:12px}.service-msg{display:inline-block}.product-msg{display:inline-block;margin-left:5px;color:#4c7097;font-size:13px}.prompt-info{color:#bebebe}.product-num{margin-left:5px}.service-tiem-info{margin-top:15px}.money{margin-left:5px;color:#4c7097;font-size:13px}.order-money{margin-left:5px;color:#ff0220;font-size:13px}.beautician ul li{height:24px;line-height:24px;color:#8a8a8a}.btn-pay{width:40%;height:40px;border:1px solid #DFDFDF;background:#ffc408;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;color:#050505;font-size:14px;margin-top:10px;margin-bottom:10px;margin-left:10px}.btn-cancel{width:40%;height:40px;border:1px solid #DFDFDF;background:#F1F1F1;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;color:#828587;font-size:14px;margin-bottom:5px;margin-right:10px}.product-message{border-top:1px solid #ECECEC}.confirm-msg{width:95%;margin:auto}.confirm-text{-moz-border-radius-topleft:4px;-moz-border-radius-topright:4px;-webkit-border-top-left-radius:4px;-webkit-border-top-right-radius:4px;border-top-left-radius:4px;border-top-right-radius:4px;background:#ffc408;border-bottom:0;color:#fff;width:95%;padding-top:12px;padding-bottom:12px;font-size:12px;font-weight:400;text-align:center;margin:auto}.notice-text{-moz-border-radius-bottomleft:4px;-moz-border-radius-bottomright:4px;-webkit-border-bottom-left-radius:4px;-webkit-border-bottom-right-radius:4px;border-bottom-left-radius:4px;border-bottom-right-radius:4px;background:#ffc408;border-bottom:0;color:#fff;width:95%;padding-top:12px;padding-bottom:12px;font-size:12px;font-weight:400;text-align:center;margin:auto;position:relative;bottom:10px;}.notice-text p{margin-top:5px}.hidden{display:none}.cancel-notice{padding-top:12px;padding-bottom:12px;padding-left:.75rem;padding-right:.75rem;height:150px}.choose-msg{color:#050505;font-weight:900;font-size:20px;background-color:#dcdde1;text-align:center;float:left;line-height:40px;width:40px;height:100%}.close{float:right;font-size:14px}.cancel-notice-top{padding-bottom:4px} .cancel-notice-bottom{border-top:1px solid #fff;text-align:left}</style>
 <header>
-   <article class="left-content">
-			<h1><a href="${content.url!}">${content.title}</a></h1>
-			<p class="author"><#if content.copied>来源：<a href="${(attribute.sourceUrl)!}" target="_blank">${(attribute.source)!}</a></#if> ${content.author!} ${content.editor!} ${content.publishDate?datetime} 阅读:<em>loading...</em></p>
-			<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["renren","bdxc","kaixin001","tqf","tieba","douban","sqq","fx","mail","isohu","ty","copy"],"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{},"image":{"viewList":["qzone","tsina","weixin"],"viewText":"分享到：","viewSize":"24"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-			<div id="content">${text?no_esc!}</div>
-			<@include path="/ftl/content_page.ftl"/>
-			<div id="SOHUCS" class="comment" sid="${content.id}"></div>
-			<script charset="utf-8"src="//changyan.sohu.com/upload/changyan.js"></script>
-			<script type="text/javascript">
-				window.changyan.api.config({
-					appid: 'cyrUsl0PT',
-					conf: 'prod_64e213c0c1210c839584707e2d5e7cd7'
-				});
-			</script>
-		</article>
-	
-	<a href=
-	   "javascript:history.back();" class="waves-effect waves-teal btn-flat go_back"><i
+    <a href="javascript:history.back();" class="waves-effect waves-teal btn-flat go_back"><i
             class="fa fa-angle-left"></i></a>
     <a href="#" data-panel="right" class="waves-effect waves-teal btn-flat more-bars open-panel">
         <i class="fa fa-bars" aria-hidden="true"></i>
@@ -148,12 +131,9 @@
         });
     });
 </script>
-	
-<div class="pa
-		
-			nel-overlay"></div>
+<div class="panel-overlay"></div>
 
-
+<div c<p class="author"><#if content.copied>来源：<a href="${(attribute.sourceUrl)!}" target="_blank">${(attribute.source)!}</a></#if> ${content.author!} ${content.editor!} ${content.publishDate?datetime} 阅读:<em>loading...</em>
     <table class="choose-list">
         <tbody>
         <tr class="choose-list-item">
