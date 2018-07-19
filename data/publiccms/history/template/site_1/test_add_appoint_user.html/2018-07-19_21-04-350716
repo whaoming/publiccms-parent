@@ -12,7 +12,7 @@
     <input type="hidden" name="_csrf" value="<@_csrfToken/>"/>
     <input name="returnUrl" type="hidden" value="//localhost:8080/publiccms/" />
     <input name="categoryId" type="hidden" value="126"/>
-		 <input name="parentId" type="text" value="${(contentId)!}" style="display:none"/>
+		 <input name="parentId" type="text" value="${(appoint_id)!}" style="display:none"/>
     <input name="modelId" type="hidden" value="user_test"/>
     <input name="author" type="hidden" value="${(user.nickName)!}"/>
     <p><label>标题:</label><input name="title" type="text" size="60" maxlength="255"/></p>

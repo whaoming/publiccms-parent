@@ -194,7 +194,7 @@
     <#list page.list as a>
 		<#assign attribute=getContentAttribute(a.id)/>
          <div class="col-33 img-btn"
-             product-url="${a.url!}"
+             product-url="./add_appoint.html?content_id=${a.id}"
 			  href="www.baidu.com"
 			  >
             <input class="img" type="image" src="${attribute.logo}">

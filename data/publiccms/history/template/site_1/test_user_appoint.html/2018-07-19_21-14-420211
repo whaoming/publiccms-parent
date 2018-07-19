@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -196,7 +197,7 @@
         <h1 href="${a.url!}">${a.title}</h1>
 	
     </#list>
-</@_userContentList>
+<@_userContentList/>
         </div>
         <div id="tabs2" class="col s12 item"></div>
         <div id="tabs3" class="col s12 item"></div>
