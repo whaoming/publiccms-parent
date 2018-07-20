@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<#-- id:内容ID -->
+<@_content id=appoint_type>
+<#assign content=object/>
+    <a href="${object.url!}">${object.title}</a>
+</@_content>
+<#-- 参数:内容Id -->
+<#assign attribute=getContentAttribute(appoint_type)/>
+	<title>${content.title} - ${category.name}</title>
+	<meta name="keywords" content="<#list getKeywords(content.title) as a>${a}<#sep>,</#list>"/>
+	<meta name="description" content="${content.description}"/>
+<@_includePlace path="/index.html/3f9a648b-7360-41b5-86e5-6b4b108268f1.html"/> <#-- 头部Header -->
+</head>
+<body>
+<@_includePlace path="/index.html/2ecdebcc-c087-4ed3-aecd-80f85ce6a6c6.html"/> <#-- 导航 -->
+<main>
+
+	<div class="container">
+		<article class="left-content">
+			<h1><a href="${content.url!}">${content.title}</a></h1>
+		
+			<div id="content">${attribute.text?no_esc!}</div>
+			
+			
+			
+		
+	
+	</div>
+	<div class="clearfix-before"></div>
+</main>
+
+</body>
+</html>

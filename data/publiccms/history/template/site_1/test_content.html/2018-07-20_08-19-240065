@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<#-- id:内容ID -->
+<@_content id=appoint_type>
+<#assign content=object/>
+    <a href="${object.url!}">${object.title}</a>
+</@_content>
+<#-- 参数:内容Id -->
+<#assign attribute=getContentAttribute(appoint_type)/>
+	<title>${content.title} - ${category.name}</title>
+
+			<@include path="/ftl/content_page.ftl"/>
+		
+
+</html>
